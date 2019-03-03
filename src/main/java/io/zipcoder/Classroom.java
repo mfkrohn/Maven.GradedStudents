@@ -59,12 +59,10 @@ public class Classroom implements Comparator<Student>{
                 studentList.remove(currentStudent);
             }
         }
-        for (Student nullChecker : studentList){
-            if(nullChecker == null){
-                studentList.remove(nullChecker);
-            }
-        }
+
+        studentList.sort(this);
         students = studentList.toArray(new Student[0]);
+
     }
 
     public ArrayList<Student> getStudentsByScore() {
